@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>函数</title>
+		<style>
+			#div1{
+				width:200px;
+				height:200px;
+				background: red;
+			}
+		</style>
+		<script>
+			function toGreen()
+			{
+				var oDiv=document.getElementById('div1');
+				oDiv.style.width='300px';
+				oDiv.style.height='300px';
+				oDiv.style.background='green';
+//				document.getElementById('div1').style.width='300px';
+//				document.getElementById('div1').style.height='300px';
+//				document.getElementById('div1').style.background='green';
+			}
+			function toRed()
+			{
+				var oDiv=document.getElementById('div1');
+				oDiv.style.width='200px';
+				oDiv.style.height='200px';
+				oDiv.style.background='red';
+//				document.getElementById('div1').style.width='200px';
+//				document.getElementById('div1').style.height='200px';
+//				document.getElementById('div1').style.background='red';
+			}
+		</script>
+	</head>
+	<body>
+		<!--<div id="div1" onmousemove="
+			document.getElementById('div1').style.width='300px';
+			document.getElementById('div1').style.height='300px';
+			document.getElementById('div1').style.background='green';"
+			onmouseout="
+			document.getElementById('div1').style.width='200px';
+			document.getElementById('div1').style.height='200px';
+			document.getElementById('div1').style.background='red';">
+		</div>-->
+		<div id="div1" onmousemove="toGreen()" onmouseout="toRed()">
+		</div>
+	</body>
+</html>

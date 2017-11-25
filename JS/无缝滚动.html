@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>无缝循环</title>
+		<style type="text/css">
+			body{
+				background: gray;
+			}
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			#cdiv{
+				width: 1040px;
+				margin: 100px auto;
+				/*background: red;*/
+				position: relative;
+				overflow: hidden;
+			}
+			#cdiv ul{
+				list-style: none;
+				position: relative;
+				left: 0;
+				top: 0;
+			}
+			#cdiv ul li
+			{
+				float: left;
+			}
+			img
+			{
+				width: 250px;
+				height: 160px;
+				margin: 5px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var odiv=document.getElementById('cdiv')
+				var oul=odiv.getElementsByTagName('ul')[0];
+				var oli=oul.getElementsByTagName('li')
+				var timer=null;
+//				alert(odiv.offsetLeft);
+				oul.innerHTML=oul.innerHTML+oul.innerHTML;
+				oul.style.width=oli[0].offsetWidth*oli.length+'px';
+				function setlf()
+				{
+					if (oul.offsetLeft<-oul.offsetWidth/2) {
+						oul.style.left='0';
+					}
+					oul.style.left=oul.offsetLeft-2+'px';
+				}
+				timer=setInterval(setlf,30);
+				oul.onmouseover=function()
+				{
+					clearInterval(timer);
+				}
+				oul.onmouseout=function()
+				{
+					timer=setInterval(setlf,30);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="cdiv">
+			<ul>
+				<li><img src="../img/1.jpg"/></li>
+				<li><img src="../img/2.jpg"/></li>
+				<li><img src="../img/3.jpg"/></li>
+				<li><img src="../img/rsideback.jpg"/></li>
+			</ul>
+		</div>
+	</body>
+</html>

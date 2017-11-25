@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>邮件全选</title>
+		<script type="text/javascript">
+			window.onload=function cxw1()
+			{
+				var ocxw1=document.getElementById('cqx');
+				var ocxw2=document.getElementById('cqbx');
+				var ocxw3=document.getElementById('cfx');
+				var ctq=document.getElementById('cdiv');
+				var cpt=ctq.getElementsByTagName('input');
+				ocxw1.onclick=function()
+				{
+					for (var i=0;i<cpt.length;i++) 
+					{
+						cpt[i].checked=true;
+					}
+				}
+				ocxw2.onclick=function()
+				{
+					for (var i=0;i<cpt.length;i++) 
+					{
+						cpt[i].checked=false;
+					}
+				}
+				ocxw3.onclick=function()
+				{
+					for (var i=0;i<cpt.length;i++) 
+					{
+						if(cpt[i].checked==false)
+						{
+							cpt[i].checked=true;
+						}
+						else
+						{
+							cpt[i].checked=false;
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" id="cqx" value="全选" />
+		<input type="button" id="cqbx" value="全不选" />
+		<input type="button" id="cfx" value="反选" /><br />
+		<div id="cdiv">
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		<input type="checkbox" /><br />
+		</div>
+	</body>
+</html>

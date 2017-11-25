@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>妄想空间</title>
+		<link rel="stylesheet" href="./reset.css" />
+	<style>
+		#container{
+			width: 1120px;
+			margin: auto;
+			border: 1px solid gray;
+		}
+		#header{
+			background-color: gray;
+			background-image: url(../img/zoro.PNG);
+			height:330px;
+			background-repeat-y:no-repeat;
+		}
+		#nav li{
+			background-color: gray;
+			width:160px;
+			height: 22px;
+			float: left;
+			text-align: center;
+		}
+		#nav li:hover{
+			background-color: orange;
+		}
+		#nav a{
+			color: black;
+			font-size:16px;
+			font-family: "微软雅黑";
+			/*display: block;
+			width: 400px;
+			height: 200px;*/
+		}
+		#nav a:hover{
+			color: white;
+			text-decoration: none;
+		}
+		#lufei{
+			width:150px;
+ 			max-width:100%;
+ 			max-height:100%;
+ 			margin: 180px 20px 50px 350px;
+		}
+		#main{
+			height: 600px;
+		}
+		#lside{
+			height: 600px;
+			width: 824px;
+			float: left;
+			background: url(../img/2.jpg);
+		}
+		#rside{
+			height: 600px;
+			width: 295px;
+			float: right;
+			background:url(../img/rsideback.jpg);
+		}
+		/*.clr{
+		 	clear：both；
+		 	width：0px;
+		 	height:0px;
+		}用于清除浮动，并且将前面与后面的div隔开，此时可以去掉main的高度*/
+		.subtitle{
+			height: 30px;
+		}
+		#qizhi{
+			width: 40px;
+			float: left;
+		}
+		/*.subtitle img{
+			float: left;
+		}*/
+		.subtitle h1{
+			float: left;
+		}
+		.subtitle a{
+			float: right;
+			font-size:15px;
+			color: white;
+			padding: 5px;
+		}
+		.four{
+			height: 250px;
+			width: 380px;
+			background: darkslategray;
+			float: left;
+			margin: 18px 9px 9px 18px;
+			border: 1px solid gray;
+		}
+		.four h2{
+			font-family: "微软雅黑";
+			font-size: 20px;
+			color: black;
+			padding: 10px;
+		}
+		.four a{
+			color: black;
+		}
+		.four img{
+			height: 150px;
+			float: left;
+			margin: 10px;
+			padding: 5px;
+			background: white;
+		}
+		.four ul{
+			float: left;
+			margin:20px 10px 10px 12px;
+		}
+		.four ul li{
+			list-style-type: disc;
+			height:20px;
+			color: black;
+		}
+		/*#art{
+			margin-top: 1px;
+			padding-top: 5px;
+		}*/
+		#art li{
+			margin:20px 10px 10px 30px;
+			list-style-type: disc;
+			height:20px;
+			color:black;
+		}
+		#art a{
+			color: black;
+		}
+		#footer{
+			height: 100px;
+			background-color: #000000;
+			clear: both;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<img id="lufei" src="../img/3.jpg" alt="logo" />
+				<ul id="nav">
+					<li><a href="#">导航1</a></li>
+					<li><a href="#">导航2</a></li>
+					<li><a href="#">导航3</a></li>
+					<li><a href="#">导航4</a></li>
+					<li><a href="#">导航5</a></li>
+					<li><a href="#">导航6</a></li>
+					<li><a href="#">导航7</a></li>
+				</ul>
+			</div>
+			<div id="main">
+				<div id="lside">
+					<div class="subtitle">
+						<img id="qizhi" src="../img/flag.jpg" alt="flag" />
+						<h1><a href="#">Grand Road</a></h1>
+						<a href="#">MORE&gt;&gt;</a>
+					</div>
+					<div class="four">
+						<h2><a href="#">船员简介</a></h2>
+						<img src="../img/全体人员.jpg" alt="all"/>
+						<ul>
+							<li><a href="#">蒙奇·D·路飞</a></li>
+							<li><a href="#">罗罗洛亚·卓洛</a></li>
+							<li><a href="#">娜美</a></li>
+							<li><a href="#">乌索普</a></li>
+							<li><a href="#">山治</a></li>
+							<li><a href="#">乔巴</a></li>
+							<li><a href="#">罗宾</a></li>
+						</ul>
+					</div>
+					<div class="four">
+						<h2><a href="#">重要人物</a></h2>
+						<img src="../img/重要人物.bmp" alt="main people"/>
+						<ul>
+							<li><a href="#">人物1</a></li>
+							<li><a href="#">人物2</a></li>
+							<li><a href="#">人物3</a></li>
+							<li><a href="#">人物4</a></li>
+							<li><a href="#">人物5</a></li>
+						</ul>
+					</div>
+					<div class="four">
+						<h2><a href="#">重要事件</a></h2>
+						<img src="../img/重要事件.bmp" alt="event"/>
+						<ul>
+							<li><a href="#">事件1</a></li>
+							<li><a href="#">事件1</a></li>
+							<li><a href="#">事件1</a></li>
+							<li><a href="#">事件1</a></li>
+							<li><a href="#">事件1</a></li>
+							<li><a href="#">事件1</a></li>
+							<li><a href="#">事件1</a></li>
+						</ul>
+					</div>
+					<div class="four">
+						<h2><a href="#">讨论社区</a></h2>
+						<img src="../img/讨论社区.jpg" alt="forums"/>
+						<ul>
+							<li><a href="#">讨论1</a></li>
+							<li><a href="#">讨论1</a></li>
+							<li><a href="#">讨论1</a></li>
+							<li><a href="#">讨论1</a></li>
+							<li><a href="#">讨论1</a></li>
+							<li><a href="#">讨论1</a></li>
+							<li><a href="#">讨论1</a></li>
+						</ul>
+					</div>
+				</div>
+				<div id="rside">
+					<div class="subtitle">
+						<h1><a href="#">Grand News</a></h1>
+						<a href="#">MORE&gt;&gt;</a>
+					</div>
+					<ul id="art">
+						<li><a href="#">文章1</a></li>
+						<li><a href="#">文章2</a></li>
+						<li><a href="#">文章3</a></li>
+						<li><a href="#">文章4</a></li>
+						<li><a href="#">文章5</a></li>
+						<li><a href="#">文章6</a></li>
+						<li><a href="#">文章7</a></li>
+					</ul>
+				</div>
+				<!--
+                	<div class="clr">用于清除浮动用，在头部定义</div>
+                -->
+			</div>
+			<div id="footer"></div>
+		</div>	
+	</body>
+</html>

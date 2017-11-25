@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简易日历</title>
+		<style type="text/css">
+			#cdiv .active
+			{
+				background: white;
+				color: red;
+			}
+			#cdiv{
+				width:380px;
+				height:620px;
+				border: 1px solid black;
+				margin: auto;
+				background: #E8E8D0;
+			}
+			#cdiv ul
+			{
+				padding:0px;
+				margin: 0px;
+			}
+			#cdiv ul li{
+				list-style-type:none;
+				width:98px;
+				height:98px;
+				border: 1px solid black;
+				margin-top:20px;
+				margin-left: 20px;
+				float:left;
+				background: black;
+				color: white
+			}
+			#cdiv ul li h2{
+				text-align: center;
+				margin-bottom: 0px;
+			}
+			#cdiv ul li p{
+				text-align: center;
+				font-weight: bold;
+				margin-top: 10px;
+			}
+			#cdiv div
+			{
+				width: 338px;
+				height: 120px;
+				border: 1px solid white;
+				margin: 490px 20px 10px 20px;
+				background: lightgray;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function()
+			{
+				var arr=new Array
+				(
+				'元旦节来啦，一年之计在于春，冲冲冲',
+				'过年好，带上老婆孩子回家团圆吧！',
+				'春天到啦，万物复苏，来一场说走就走的春游~',
+				'千万不要被骗哦，愚人节快乐',
+				'五月的天，大家一起唱起来~~',
+				'啦啦啦，今天我要过儿童节，啦啦啦',
+				'放暑假咯，和小伙伴们一起捕蝉爬山去吧',
+				'哦哦，假期就剩一半了，是时候写一波暑假作业',
+				'人生最大的目标就是：不想上学！！！预祝教师节快乐',
+				'哈哈哈，谢谢我的祖国赐予我假期，厉害了我的国',
+				'给媳妇卡，刷刷刷！马云爸爸笑着看我们剁手',
+				'双12也不让人好过啊，一年又要过去了，又长大一岁啦~~',
+				)
+				var ca=document.getElementById('cdiv');
+				var cb=ca.getElementsByTagName('li');
+				var cc=ca.getElementsByTagName('div')[0];
+				
+				for(var i=0;i<cb.length;i++)
+				{
+					cb[i].index=i;
+					cb[i].onmouseover=function()
+					{
+						for(var i=0;i<cb.length;i++)
+						{
+							cb[i].className='';
+						}
+						this.className='active';
+						cc.innerHTML='<h2>'+(this.index+1)+'月活动</h2><p>'+arr[this.index]+'</p>';
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="cdiv">
+			<ul>
+				<li class="active"><h2>1</h2><p>JAN</p></li>
+				<li><h2>2</h2><p>FER</p></li>
+				<li><h2>3</h2><p>MAR</p></li>
+				<li><h2>4</h2><p>APR</p></li>
+				<li><h2>5</h2><p>MAY</p></li>
+				<li><h2>6</h2><p>JUN</p></li>
+				<li><h2>7</h2><p>JULY</p></li>
+				<li><h2>8</h2><p>AUG</p></li>
+				<li><h2>9</h2><p>SEP</p></li>
+				<li><h2>10</h2><p>OCT</p></li>
+				<li><h2>11</h2><p>NOV</p></li>
+				<li><h2>12</h2><p>DEC</p></li>
+			</ul>
+			<div>
+				<h2>1月活动</h2><p>元旦节来啦，一年之计在于春，冲冲冲啦啦啦啦啦啊啦拉。</p>
+			</div>
+		</div>
+	</body>
+</html>

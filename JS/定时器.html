@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>妄想空间</title>
+		<style>
+			body{
+				background: gray;
+			}
+			div{
+				font-size: 100px;
+				margin: 200px 100px;
+			}
+		</style>
+		<script type="text/javascript">
+			function cstr(n)
+			{
+				if(n<10)
+				{
+					return '0'+n;
+				}
+				else{
+					return ''+n;
+				}
+			}
+			window.onload=function()
+			{
+				var odiv=document.getElementById('cdiv');
+				var oimg=odiv.getElementsByTagName('img');
+				var timer=null;
+				function tick()
+				{
+				var odate=new Date();
+				var str=cstr(odate.getHours())+cstr(odate.getMinutes())+cstr(odate.getSeconds());
+				for(i=0;i<str.length;i++)
+				{
+					oimg[i].src='../时间数字/'+str[i]+'.PNG';
+				}
+				}
+				setInterval(tick,1000);
+				tick();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="cdiv">
+			<img src="../时间数字/0.PNG" />
+			<img src="../时间数字/0.PNG" />
+			：
+			<img src="../时间数字/0.PNG" />
+			<img src="../时间数字/0.PNG" />
+			：
+			<img src="../时间数字/0.PNG" />
+			<img src="../时间数字/0.PNG" />
+		</div>
+	</body>
+</html>
